@@ -8,6 +8,7 @@ class Customer
   def initialized(name, age)    # initialized with name and age
     @name = name
     @age = age
+    @@all << self
   end 
   
   def self.all    # is class method that returns the contents of @@all
