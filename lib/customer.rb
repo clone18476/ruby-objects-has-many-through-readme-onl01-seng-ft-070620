@@ -23,7 +23,7 @@ class Customer
     Meal.get_meals_by_customer(self)
   end
 
-  def waiters
+  def waiters      # returns an Array of Waiter instances associated with this customer's meals
     Meal.get_waiters_by_customer(self)
   end
   
