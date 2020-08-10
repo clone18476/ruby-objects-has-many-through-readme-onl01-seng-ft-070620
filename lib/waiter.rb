@@ -22,14 +22,12 @@ class Waiter
     Meal.all.each do |meal|
       if (!meal_with_biggest_tip || meal.tip > meal_with_biggest_tip.tip) 
         meal_with_biggest_tip = meal
-        end
       end
+    end
     meal_with_biggest_tip.customer
   end
 
   def self.all
-      @@all
+    @@all
   end
 end
-
-
