@@ -8,7 +8,6 @@ class Waiter
      @name = name 
      @year = years 
      @@all << self
-
   end 
   
   def self.all    # is class method that returns the contents of @@all
