@@ -13,7 +13,7 @@ class Waiter
   def self.all    # is class method that returns the contents of @@all
     @@all
   end 
-  
+  nitializes a meal using the current Waiter instance, a provided Customer instance and a total and tip
   
 
 end
