@@ -143,7 +143,7 @@ describe "Object relationships" do
   end
 
   describe "Waiter" do
-    describe "#new_meal" do
+    describe "#new_meal" do # done 
       it "initializes a meal using the current Waiter instance, a provided Customer instance and a total and tip" do
         howard = Customer.new("Howard", 30)
         terrance = Waiter.new("Terrance", 1)
