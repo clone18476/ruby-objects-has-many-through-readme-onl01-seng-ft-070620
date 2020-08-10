@@ -18,9 +18,12 @@ class Customer
     Meal.new(waiter, self, total, tip)
   end 
   
-  def meals     # returns an Array of Meal instances associated with this customer
-    Meal.get_m
-    
-  end 
+  def meals
+    Meal.get_meals_by_customer(self)
+  end
+
+  def waiters
+    Meal.get_waiters_by_customer(self)
+  end
   
 end
