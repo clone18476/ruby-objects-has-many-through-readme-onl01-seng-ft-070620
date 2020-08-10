@@ -14,5 +14,9 @@ class Customer
     @@all
   end 
   
+  def new_meal(waiter, total, tip)   # new_meal initializes a meal using the current Customer instance, a provided Waiter instance and a total and tip
+    Meal.new(waiter, self, total, tip)
+    
+  end 
   
 end
