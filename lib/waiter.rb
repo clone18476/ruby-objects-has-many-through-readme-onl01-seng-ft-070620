@@ -1,19 +1,36 @@
 class Waiter
   
-  attr_accessor :name, :years
+  attr_accessor :name, :experience
   
   @@all = []
   
-  def initialize(name, years)    # initializes with a name and years of experience
+  def initialize(name, experience)    # initializes with a name and years of experience
      @name = name 
-     @year = years 
+     @experience = experience 
      @@all << self
   end 
   
-  def self.all    # is class method that returns the contents of @@all
-    @@all
-  end 
-  nitializes a meal using the current Waiter instance, a provided Customer instance and a total and tip
-  
+  def new_meal(customer, total, tip)
+      Meal.new(self, customer, total, tip)
+  end
+
+  def meals
+      Meal.get_meals_by_waiter(self)
+  end
+
+  def best_tipper
+    meal_with_biggest_tip = nil
+      Meal.all.each do |meal|
+        if (!meal_with_biggest_tip || meal.tip > meal_with_biggest_tip.tip) 
+            meal_with_biggest_tip = meal
+          end
+        end
+      meal_with_biggest_tip.customer
+    end
+
+    def self.all
+        @@all
+    end
+
 
 end
